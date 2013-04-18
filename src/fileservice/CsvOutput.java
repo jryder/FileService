@@ -4,10 +4,43 @@
  */
 package fileservice;
 
+import abstraction.OutputStrategy;
+import java.io.File;
+import java.util.LinkedHashMap;
+
+
 /**
  *
  * @author jryder
  */
-public class CsvOutput {
+
+
+
+// use linked list to pass into the writer
+// regular maps do not maintain order
+// list<linkedhashmap<string,string>>
+// overload this!  :D  Then the user can go the cheap route or the good route
+
+
+
+public class CsvOutput implements OutputStrategy{
+
+    
+    @Override
+    public void setFile(File filename) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }    
+    
+    @Override
+    public void writeFile(String string) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+
+
+    @Override
+    public void writeFile(LinkedHashMap linkedHashMap) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
     
 }
