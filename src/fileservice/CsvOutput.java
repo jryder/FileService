@@ -26,11 +26,18 @@ import java.util.LinkedHashMap;
 public class CsvOutput implements OutputStrategy{
 
     
+    File file;
+    
     @Override
-    public void setFile(File filename) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public void setFile(File file) {
+       this.file = file;
     }    
     
+    
+    /**
+     * String needs to be separated by commas
+     * @param string 
+     */
     @Override
     public void writeFile(String string) {
         throw new UnsupportedOperationException("Not supported yet.");
