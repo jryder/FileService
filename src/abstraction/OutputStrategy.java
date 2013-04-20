@@ -15,4 +15,5 @@ public interface OutputStrategy {
     public abstract void setFile(File filename);
     public abstract void writeFile(LinkedHashMap linkedHashMap);
     public abstract void writeFile(String string);
+    public abstract File getFile();
 }
