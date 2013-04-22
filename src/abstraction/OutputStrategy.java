@@ -5,7 +5,9 @@
 package abstraction;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.LinkedHashMap;
+import java.util.List;
 
 /**
  *
@@ -13,7 +15,7 @@ import java.util.LinkedHashMap;
  */
 public interface OutputStrategy {
     public abstract void setFile(File filename);
-    public abstract void writeFile(LinkedHashMap linkedHashMap);
-    public abstract void writeFile(String string);
+    public abstract void writeFile(List<LinkedHashMap<String, String>> linkedHashMap) throws IOException;
+    //public abstract void writeFile(String string)throws IOException ;  add this later
     public abstract File getFile();
 }

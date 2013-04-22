@@ -7,7 +7,9 @@ package fileservice;
 import abstraction.InputStrategy;
 import abstraction.OutputStrategy;
 import java.io.File;
+import java.io.IOException;
 import java.util.LinkedHashMap;
+import java.util.List;
 
 /**
  *
@@ -39,10 +41,8 @@ public class FileService {
         outputStrategy.setFile(file);
     }
      
-    
-    
-    
-    
+
+    //not supported yet
     public String readFileAsString(){
         inputStrategy.readFile();
         return "test";
@@ -54,8 +54,8 @@ public class FileService {
     }
     
     
-    public void writeFile(){
-        outputStrategy.writeFile(new String()); //:D
+    public void writeFile(List<LinkedHashMap<String, String>> link) throws IOException{
+        outputStrategy.writeFile(link); //:D
     }
 
     public static void main(String[] args) {
